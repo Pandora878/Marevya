@@ -1,0 +1,11 @@
+CIÊNCIA QUEST — COMPLETO
+
+Inclui Pré I, Pré II, 1º, 2º, 3º, 4º e 5º ano.
+Mecânica principal: arrastar e soltar / tocar para selecionar e tocar na categoria.
+
+Para abrir:
+1. Extraia o ZIP.
+2. Abra index.html.
+3. Escolha a turma.
+
+As imagens são carregadas do Wikimedia Commons por links externos. É necessário internet para que as imagens apareçam.
