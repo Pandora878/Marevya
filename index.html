@@ -1,189 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Quest</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ciência Quest — Pequenos Cientistas</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="app">
+<header>
+  <div class="brand"><div class="brandIcon">🔬</div><div><b>Ciência Quest</b><small>Pequenos Cientistas</small></div></div>
+  <div class="score">⭐ <b id="score">0</b></div>
+</header>
 
-<section id="loginScreen" class="screen active">
-  <div class="login-wrapper">
-    <div class="brand"><div class="brand-icon">M</div><div><h1>MATH QUEST</h1><p>Aventura matemática</p></div></div>
-    <div class="login-card">
-      <div class="login-character" id="loginCharacter"></div>
-      <div class="login-title">Vamos começar?</div>
-      <p class="login-description">Crie seu perfil para entrar na aventura matemática.</p>
-      <label for="playerName">Nome do aluno</label>
-      <input id="playerName" type="text" maxlength="20" placeholder="Digite seu nome">
-      <button id="startButton" class="primary-button">Continuar <span>→</span></button>
-    </div>
-    <div class="copyright">Math Quest • Educação Matemática</div>
-  </div>
-</section>
-
-
-<section id="gradeScreen" class="screen grade-screen">
-  <div class="grade-wrapper">
-    <div class="grade-header">
-      <span>CONFIGURAÇÃO DA AVENTURA</span>
-      <h1>Qual é a sua turma?</h1>
-      <p>Escolha o nível para receber desafios adequados à idade.</p>
-    </div>
-    <div id="gradeOptions" class="grade-grid"></div>
-    <button id="gradeBack" class="secondary-button">← Voltar</button>
-  </div>
-</section>
-
-<section id="characterScreen" class="screen">
-  <div class="editor-page">
-    <aside class="editor-sidebar">
-      <div class="editor-logo">
-        <div class="editor-logo-mark">M</div>
-        <div><b>MATH<br>QUEST</b><span>APRENDER TAMBÉM É<br>UMA GRANDE AVENTURA</span></div>
-      </div>
-      <nav class="editor-nav">
-        <button class="editor-nav-item active">⌂ <span>Início</span></button>
-        <button class="editor-nav-item active">● <span>Meu Personagem</span></button>
-        <button class="editor-nav-item">◇ <span>Missões</span></button>
-        <button class="editor-nav-item">★ <span>Ranking</span></button>
-        <button class="editor-nav-item">✦ <span>Conquistas</span></button>
-        <button class="editor-nav-item">⚙ <span>Configurações</span></button>
-      </nav>
-      <div class="editor-sidebar-card"><strong>PEQUENOS<br>DESAFIOS<br>GRANDES<br>CONQUISTAS</strong></div>
-    </aside>
-
-    <main class="editor-main">
-      <header class="editor-topbar">
-        <button id="editorBack" class="editor-back">← Voltar</button>
-        <div><h1>Personalize seu personagem</h1><p>Crie um visual único e entre nessa aventura!</p></div>
-        <div class="editor-points">★ <b id="editorPoints">0</b><span>Pontos</span></div>
-      </header>
-
-      <div class="editor-workspace">
-        <div class="editor-controls">
-          <div class="editor-panel">
-            <h2>1. Escolha seu animal</h2>
-            <div id="animalOptions" class="animal-options"></div>
-          </div>
-
-          <div class="editor-panel">
-            <h2>2. Cor da pele / pelagem</h2>
-            <div id="furOptions" class="swatches"></div>
-          </div>
-
-          <div class="editor-panel">
-            <h2>3. Estilo da cabeça</h2>
-            <div id="headOptions" class="style-options"></div>
-          </div>
-
-          <div class="editor-panel">
-            <h2>4. Roupa (camisa/moletom)</h2>
-            <div id="shirtOptions" class="style-options"></div>
-          </div>
-
-          <div class="editor-panel">
-            <h2>5. Acessórios</h2>
-            <div id="accessoryOptions" class="style-options"></div>
-          </div>
-        </div>
-
-        <aside class="editor-preview">
-          <div class="speech">✦ Conhecimento<br>te leva mais longe!</div>
-          <div id="bigCharacter" class="big-character"></div>
-          <div class="preview-stat"><span>Nome</span><b id="previewName">Luna</b><i>✎</i></div>
-          <div class="preview-stat"><span>Nível</span><b id="previewLevel">1</b><div class="preview-xp"><div id="previewXpBar"></div></div><small id="previewXp">0 / 100 XP</small></div>
-          <div class="preview-stat points-stat">★ <b id="previewPoints">0</b><span>Pontos</span></div>
-          <button id="enterGameButton" class="save-character">✓ &nbsp; Salvar Personagem</button>
-        </aside>
-      </div>
-
-      <div class="editor-bottom">
-        <div><h2>Prévia no Ranking</h2><div class="rank-preview"><div id="rankCharacter"></div><b id="rankName">Luna</b><span>✎</span></div></div>
-        <div class="mini-stats"><div><b>8</b><span>Acertos</span></div><div><b>2</b><span>Erros</span></div><div><b>80%</b><span>Precisão</span></div><div><b>4</b><span>Melhor combo</span></div></div>
-      </div>
-    </main>
-  </div>
-</section>
-
-<section id="menuScreen" class="screen dashboard-screen">
-  <div class="dashboard">
-    <header class="dashboard-header">
-      <div class="profile">
-        <div id="smallCharacter" class="small-character"></div>
-        <div><strong id="dashboardName">Jogador</strong><span id="dashboardGrade">Turma</span><span id="dashboardLevel">Nível 1</span></div>
-      </div>
-      <div class="top-stats">
-        <div class="top-stat"><span>Pontos</span><strong id="totalPoints">0</strong></div>
-        <div class="top-stat"><span>Recorde</span><strong id="recordPoints">0</strong></div>
-      </div>
-    </header>
-
-    <div class="welcome"><div><span id="gradeBadge">ÁREA DO JOGADOR</span><h1 id="gradeTitle">Escolha sua missão</h1><p id="gradeDescription">Resolva os desafios antes que o tempo acabe.</p></div></div>
-
-    <div class="xp-card">
-      <div class="xp-info"><strong>Progresso</strong><span id="xpText">0 / 100 XP</span></div>
-      <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
-    </div>
-
-    <h2 class="section-heading">Missões</h2>
-
-    <div id="missionGrid" class="mission-grid"></div>
-
-    <div class="ranking-card">
-      <div class="ranking-header"><div><span>COMPETIÇÃO</span><h2>Tabela de pontuação</h2><small id="rankingStatus" class="ranking-status">Conectando ao ranking...</small></div><div class="trophy">★</div></div>
-      <div class="ranking-head"><span>#</span><span>Jogador</span><span>Pontos</span><span>Nível</span></div>
-      <div id="ranking" class="ranking-body"></div>
+<section id="home" class="screen active">
+  <div class="hero">
+    <div class="characters"><span>🧑‍🔬</span><span>🐾</span><span>🌱</span><span>🤖</span></div>
+    <span class="tag">LABORATÓRIO DE DESCOBERTAS</span>
+    <h1>Vamos descobrir a Ciência?</h1>
+    <p>Escolha sua turma e complete pequenas missões científicas.</p>
+    <div class="gradeGrid">
+      <button data-grade="pre1"><span>🌈</span><div><b>Pré I</b><small>Descobrir e observar</small></div><strong>›</strong></button>
+      <button data-grade="pre2"><span>🚀</span><div><b>Pré II</b><small>Explorar e classificar</small></div><strong>›</strong></button>
+      <button data-grade="1"><span>🌱</span><div><b>1º ano</b><small>Seres vivos e ambiente</small></div><strong>›</strong></button>
+      <button data-grade="2"><span>💧</span><div><b>2º ano</b><small>Corpo, plantas e natureza</small></div><strong>›</strong></button>
+      <button data-grade="3"><span>🫀</span><div><b>3º ano</b><small>Corpo, Terra e animais</small></div><strong>›</strong></button>
+      <button data-grade="4"><span>🌎</span><div><b>4º ano</b><small>Ecossistemas e matéria</small></div><strong>›</strong></button>
+      <button data-grade="5"><span>🧬</span><div><b>5º ano</b><small>Ciência e investigação</small></div><strong>›</strong></button>
     </div>
   </div>
 </section>
 
-<section id="gameScreen" class="screen game-screen">
-  <div class="game-container">
-    <header class="game-header">
-      <button id="exitGame" class="icon-button">←</button>
-      <div class="question-counter">Questão <strong id="questionNumber">1</strong><span> / 10</span></div>
-      <div class="lives"><span id="life1" class="life active"></span><span id="life2" class="life active"></span><span id="life3" class="life active"></span></div>
-    </header>
-
-    <div class="timer-container">
-      <div class="timer-label"><span>TEMPO</span><strong id="timerText">15.0</strong></div>
-      <div class="timer-track"><div id="timerBar" class="timer-bar"></div></div>
-    </div>
-
-    <main class="question-card">
-      <div id="questionType" class="question-type">ADIÇÃO</div>
-      <div id="questionText" class="question-text">15 + 7 = ?</div>
-      <p class="question-help">Escolha a resposta correta</p>
-      <div id="answers" class="answers"></div>
-      <div id="feedback" class="feedback"></div>
-    </main>
-
-    <div class="game-footer">
-      <div><span>Pontos</span><strong id="roundPoints">0</strong></div>
-      <div><span>Combo</span><strong id="combo" class="combo-value">x0</strong></div>
-    </div>
+<section id="game" class="screen">
+  <div class="gamebar">
+    <button id="homeBtn" class="icon" aria-label="Voltar">⌂</button>
+    <div class="stage"><b id="gradeName"></b><small id="roundName"></small></div>
+    <div class="timer" id="timer"></div><div class="lives" id="lives">❤️❤️❤️</div>
   </div>
+  <div class="progress"><i id="progress"></i></div>
+  <div class="mission"><span id="missionIcon">🔎</span><div><small>MISSÃO</small><b id="instruction"></b></div></div>
+  <div class="board">
+    <section class="panel"><div class="panelTitle"><b id="leftTitle">Figuras</b><small>Arraste ou toque</small></div><div id="items"></div></section>
+    <section class="panel"><div class="panelTitle"><b id="rightTitle">Onde vai?</b><small>Complete a missão</small></div><div id="targets"></div></section>
+  </div>
+  <div id="message" class="message" aria-live="polite"></div>
+  <button id="next" class="next" hidden>Continuar missão →</button>
 </section>
 
-<section id="resultScreen" class="screen">
-  <div class="result-card">
-    <div id="resultCharacter" class="result-character"></div>
-    <div class="result-label">DESAFIO ENCERRADO</div>
-    <h1 id="resultTitle">Muito bem!</h1>
-    <p id="resultMessage">Você terminou a missão.</p>
-    <div class="final-points"><span>Pontuação</span><strong id="finalPoints">0</strong></div>
-    <div class="result-stats">
-      <div><strong id="correctCount">0</strong><span>Acertos</span></div>
-      <div><strong id="wrongCount">0</strong><span>Erros</span></div>
-      <div><strong id="accuracy">0%</strong><span>Precisão</span></div>
-      <div><strong id="bestCombo">0</strong><span>Melhor combo</span></div>
-    </div>
-    <button id="backMenu" class="primary-button">Voltar ao mapa <span>→</span></button>
-  </div>
+<section id="result" class="screen">
+ <div class="resultCard">
+  <div class="confetti">🎉</div><div class="medal">🏆</div><span class="tag">MISSÃO CONCLUÍDA</span>
+  <h1>Excelente trabalho!</h1><p id="resultText"></p>
+  <div class="stats"><div>⭐<b id="finalScore">0</b><small>pontos</small></div><div>🔬<b id="finalHits">0</b><small>descobertas</small></div></div>
+  <button id="again">🔄 Escolher outra turma</button>
+ </div>
 </section>
-
+</div>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
