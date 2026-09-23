@@ -29,3 +29,21 @@
   .row.head{display:none}
   .row span{overflow-wrap:anywhere}
 }
+
+.access-denied{max-width:620px;margin:70px auto;padding:34px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-align:center}.access-icon{font-size:30px;margin-bottom:10px}.access-denied h2{font:400 34px 'Playfair Display',serif;margin:5px 0 10px}.access-denied p{color:var(--muted);line-height:1.6;font-size:13px}.admin-help{text-align:left;margin:22px 0;padding:18px;background:#f4f2eb;border-radius:8px}.admin-help strong{font-size:12px;letter-spacing:.05em}.admin-help ol{margin:12px 0 0;padding-left:22px;color:var(--ink);font-size:13px;line-height:1.8}.uid-line{font-size:11px!important;word-break:break-all}.uid-line code{background:#eeeae0;padding:3px 5px;border-radius:4px}.gate-actions{display:flex;justify-content:center;gap:10px;margin-top:20px}.gate-actions a,.gate-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:6px;text-decoration:none;font:600 12px 'DM Sans',sans-serif;cursor:pointer}.gate-actions a{background:#252921;color:#fff}.gate-actions button{border:1px solid var(--line);background:#fff;color:var(--ink)}
+@media(max-width:600px){.access-denied{margin:25px auto;padding:22px 17px}.access-denied h2{font-size:28px}.gate-actions{flex-direction:column}.gate-actions a,.gate-actions button{width:100%}}
+
+/* Marevya Admin — refinamento visual sutil */
+body{ -webkit-font-smoothing:antialiased; }
+.admin-side{box-shadow:8px 0 28px rgba(28,31,25,.07)}
+.admin-side nav a{transition:background .2s ease,color .2s ease,transform .2s ease}
+.admin-side nav a:hover{transform:translateX(2px)}
+.admin-side button{transition:background .2s ease,border-color .2s ease}
+.admin-side button:hover{background:#353b2e;border-color:#646b5b}
+.stats article,.admin-block{box-shadow:0 8px 24px rgba(39,43,36,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.stats article:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(39,43,36,.07);border-color:#d3d1c7}
+.admin-block{border-radius:10px}
+.block-head button{transition:all .2s ease}
+.block-head button:hover{background:#f4f2eb;border-color:#c9c6bb}
+.client{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.client:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(39,43,36,.05);border-color:#d2cfc4}

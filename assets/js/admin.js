@@ -8,7 +8,11 @@
  function table(el,head,rows,emptyMsg){el.innerHTML=rows.length?'<div class="row head">'+head.map(x=>'<span>'+x+'</span>').join('')+'</div>'+rows.map(r=>'<div class="row">'+r.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>').join(''):'<div class="empty">'+emptyMsg+'</div>'}
  async function load(user){
    const me=await db.collection('users').doc(user.uid).get(); const data=me.exists?me.data():{};
-   if(data.role!=='admin'){location.href='home.html';return}
+   if(data.role!=='admin'){
+     $('gate').innerHTML=`<div class="access-denied"><div class="access-icon">🔒</div><h2>Acesso administrativo</h2><p>Esta conta está autenticada, mas ainda não possui a permissão <b>admin</b>.</p><div class="admin-help"><strong>Como liberar esta conta</strong><ol><li>Abra o Firebase Console.</li><li>Entre em <b>Firestore Database → users</b>.</li><li>Abra o documento com o UID desta conta.</li><li>Defina <b>role</b> como <b>admin</b>.</li><li>Recarregue esta página.</li></ol></div><p class="uid-line">UID: <code>${esc(user.uid)}</code></p><div class="gate-actions"><a href="home.html">Voltar ao site</a><button id="adminLogout" type="button">Trocar conta</button></div></div>`;
+     const b=document.getElementById('adminLogout'); if(b) b.onclick=()=>auth.signOut();
+     return;
+   }
    $('gate').hidden=true;$('dashboard').hidden=false;
    const name=data.name||user.displayName||'Administrador';
    $('userName').textContent=name;$('userEmail').textContent=user.email||'';$('userAvatar').textContent=name.charAt(0).toUpperCase();$('greeting').textContent='Olá, '+name.split(' ')[0]+'.';
