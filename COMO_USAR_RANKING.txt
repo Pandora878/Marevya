@@ -1,0 +1,33 @@
+MATH QUEST — RANKING COMPARTILHADO ENTRE TABLETS
+
+1. No computador que vai funcionar como servidor, abra INICIAR_MATH_QUEST.bat.
+2. O jogo abrirá no computador e o servidor mostrará um endereço parecido com:
+   http://192.168.0.10:3000
+3. Em cada tablet conectado à MESMA rede Wi-Fi, abra esse mesmo endereço no navegador.
+4. Todos os tablets passarão a usar o mesmo ranking.
+5. Deixe a janela preta do servidor aberta enquanto a turma estiver jogando.
+
+IMPORTANTE:
+- O ranking é compartilhado pela rede local e fica salvo em ranking.json.
+- Se o Windows perguntar se o Node.js pode passar pelo Firewall, permita em Redes Privadas.
+- Se os tablets não abrirem o endereço, confira se todos estão na mesma Wi-Fi e se o Firewall do Windows não está bloqueando a porta 3000.
+- O ranking não depende do localStorage de cada tablet: as pontuações são enviadas para o servidor.
+
+REQUISITO:
+- Node.js instalado no computador servidor.
+
+
+VERSÃO COM TODAS AS TURMAS
+--------------------------
+O aluno escolhe a turma depois de informar o nome:
+Pré I, Pré II, 1º, 2º, 3º, 4º ou 5º ano.
+
+Pré I: contagem, comparação, sequências e formas.
+Pré II: contagem, adição, subtração e sequências.
+1º ano: adição, subtração, sequências e comparação.
+2º ano: adição, subtração, multiplicação e divisão inicial.
+3º ano: quatro operações com números maiores.
+4º ano: operações, multiplicação e frações.
+5º ano: operações, frações, decimais e porcentagens.
+
+O ranking online é separado por turma.
