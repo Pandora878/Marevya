@@ -527,3 +527,11 @@ body{background:var(--paper);-webkit-font-smoothing:antialiased;text-rendering:o
   .jet-counter-row{align-items:center !important;}
   .jet-counter-row .big-counter{align-self:center;}
 }
+
+/* Acesso administrativo — botão discreto no site */
+.admin-home-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:38px;padding:0 14px;border:1px solid rgba(45,52,37,.22);border-radius:999px;background:rgba(255,255,255,.72);color:#2d3425;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.02em;transition:all .2s ease;white-space:nowrap}
+.admin-home-link:hover{background:#2d3425;color:#fff;border-color:#2d3425;transform:translateY(-1px);box-shadow:0 8px 18px rgba(45,52,37,.12)}
+.admin-home-link svg{width:15px;height:15px;flex:0 0 15px}
+@media (max-width:760px){.admin-home-link{height:36px;padding:0 11px;font-size:11px}.tools .admin-home-link{display:none}.mobile-nav .admin-mobile-link{display:flex}}
+.mobile-nav .admin-mobile-link{display:none}
+@media (max-width:760px){.mobile-nav .admin-mobile-link{display:block}}

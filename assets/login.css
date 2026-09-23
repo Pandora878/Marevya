@@ -7,7 +7,7 @@
 .admin-access a{color:#3f4636;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.02em}
 .admin-access a:hover{text-decoration:underline}
 .admin-access small{color:#8a8b82;font-size:10px}
-@media(max-width:720px){.admin-access{margin-top:18px;padding-top:15px}.admin-access a{font-size:13px}}
+@media(max-width:720px){.admin-access{margin-top:18px;padding-top:15px}.admin-access-btn{padding:13px}.admin-access-btn b{font-size:13px}}
 /* Ajuste final do formulário de login Marevya */
 .login-page button.login-btn,
 .login-page button.login-btn:not(.menu-btn):not(.icon-btn):not(.text-btn){
@@ -31,3 +31,57 @@
   opacity:1 !important;
 }
 .login-page button.google-btn:hover{background:#ffffff !important;color:#252820 !important;border-color:#aaa99f !important}
+
+/* Correção definitiva do botão Google */
+.login-page .google-btn{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-wrap:nowrap !important;
+  gap:10px !important;
+  overflow:hidden !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.login-page .google-btn .google-mark{
+  position:relative !important;
+  display:inline-flex !important;
+  flex:0 0 20px !important;
+  width:20px !important;
+  min-width:20px !important;
+  max-width:20px !important;
+  height:20px !important;
+  min-height:20px !important;
+  max-height:20px !important;
+  overflow:hidden !important;
+  align-items:center !important;
+  justify-content:center !important;
+  vertical-align:middle !important;
+}
+.login-page .google-btn .google-mark svg{
+  position:static !important;
+  display:block !important;
+  width:20px !important;
+  min-width:20px !important;
+  max-width:20px !important;
+  height:20px !important;
+  min-height:20px !important;
+  max-height:20px !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+  overflow:hidden !important;
+}
+.login-page .google-btn > span:last-child{
+  display:inline-block !important;
+  position:static !important;
+  width:auto !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  line-height:20px !important;
+  transform:none !important;
+}
+.login-page .google-btn.is-loading .google-mark{opacity:.65}
