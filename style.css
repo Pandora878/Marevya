@@ -383,13 +383,3 @@ body{background:radial-gradient(circle at 15% 0,#1b2450 0,transparent 34%),radia
 .character-shop-button:hover{background:#315188;transform:translateY(-1px)}
 .skin-mint{background:linear-gradient(135deg,#20c997,#0d6b55)}.skin-candy{background:linear-gradient(135deg,#ff7ab6,#8e5cf7)}.skin-emerald{background:linear-gradient(135deg,#20c997,#075e45)}.skin-ice{background:linear-gradient(135deg,#b8f3ff,#4c9cff)}.skin-royal{background:linear-gradient(135deg,#8b5cf6,#3b176e)}.skin-cosmic{background:linear-gradient(135deg,#18235e,#6d28d9,#111827)}.skin-plasma{background:linear-gradient(135deg,#ff4dff,#5826c7,#00e5ff)}.skin-diamond{background:linear-gradient(135deg,#d8f8ff,#72a7ff,#fff)}.skin-rainbow{background:linear-gradient(120deg,#ff2d55,#ffd60a,#00e5ff,#7c3aed,#ff2d55);background-size:300% 300%;animation:skinRgb 2s linear infinite}.skin-champion{background:linear-gradient(135deg,#fff0a8,#f2b632,#8b5e00)}.skin-master{background:linear-gradient(135deg,#c084fc,#7c3aed,#1e1b4b)}
 @media(max-width:650px){.character-shop-actions{flex-direction:column;align-items:stretch}.character-shop-actions span{text-align:center}}
-
-.animal-card{position:relative;min-width:118px;padding:10px;border:1px solid #dfe6f0;border-radius:15px;background:#fff;cursor:pointer;transition:.16s}
-.animal-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(24,40,63,.08)}
-.animal-card.selected{border-color:#3974e8;box-shadow:0 0 0 2px rgba(57,116,232,.12)}
-.animal-card.locked-animal{background:#f2f4f8;filter:saturate(.65)}
-.animal-card-image{height:84px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.animal-card-image svg{width:84px;height:84px}
-.animal-card span,.animal-card small{display:block;text-align:center}
-.animal-card span{font-weight:900;color:#1e2f47;margin-top:5px}
-.animal-card small{font-size:11px;color:#9b6a12;font-weight:800;margin-top:3px}
