@@ -1,0 +1,12 @@
+ANIMAIS ADICIONAIS
+Grátis: Raposa, Panda, Gato, Coelho, Cachorro, Tigre.
+Compráveis:
+Leão 1.200
+Pinguim 1.800
+Coala 2.500
+Macaco 3.200
+Lobo 4.500
+Unicórnio 6.000
+Dragão 8.000
+Axolote 10.000
+O progresso dos animais comprados é salvo no perfil e sincronizado pelo nick.

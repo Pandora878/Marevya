@@ -1,0 +1,20 @@
+LOGIN POR NICK + LOJA DE SKINS
+
+LOGIN:
+- A criança usa o mesmo nickname em outro aparelho.
+- O perfil é carregado do Firebase pelo nickname.
+- Não é necessária senha.
+- IMPORTANTE: isso não é autenticação forte. Qualquer pessoa que saiba o nickname consegue abrir aquele perfil.
+
+SKINS:
+- Clássica: grátis
+- Oceano Neon: 750 moedas
+- Sombra: 1.200 moedas
+- Ouro: 2.500 moedas
+- Lava: 4.000 moedas
+- Galáxia: 5.000 moedas
+- RGB Lendária: 10.000 moedas
+- A RGB tem animação e é enviada junto do personagem para aparecer no ranking.
+
+FIREBASE:
+Depois de atualizar o projeto, publique o firestore.rules desta pasta no Firebase.

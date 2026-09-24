@@ -1,0 +1,1 @@
+18 skins + botão Alterar personagem. RGB e Arco-Íris usam roupa animada no personagem e ranking.

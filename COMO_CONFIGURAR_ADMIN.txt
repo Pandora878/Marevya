@@ -1,0 +1,21 @@
+MATH QUEST - ATUALIZAÇÃO
+
+ADMIN:
+Senha atual: Aj0505
+
+TEMPOS:
+Pré I: 60s
+Pré II: 60s
+1º ano: 120s
+2º ano: 120s
+3º ano: 60s
+4º ano: 40s
+5º ano: 30s
+
+ANTI-CHUTE:
+- Resposta errada = 0 pontos na questão.
+- Primeiro erro: 4 segundos de espera.
+- Segundo erro consecutivo ou mais: 7 segundos de espera.
+- O combo é zerado.
+- Se houver qualquer erro na missão, o bônus final da fase não é concedido.
+- Acerto zera a sequência de erros.
